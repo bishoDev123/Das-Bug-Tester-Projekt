@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 public class LoginPage implements ActionListener {
+
     //define all the components used in the login page
     JFrame frame = new JFrame();
     JButton loginButton = new JButton("login");
