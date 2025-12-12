@@ -1,19 +1,22 @@
 package Authentication;
+import Users.*;
 
 import java.util.HashMap;
 
+import static java.util.Calendar.PM;
+
 public class IDandPasswords {
 
-    HashMap<String, String> logininfo = new HashMap<String, String>();
+    private HashMap<String, User> users = new HashMap<>();
 
     public IDandPasswords() {
-        logininfo.put("admin", "12345678");
-        logininfo.put("developer", "abcd123");
-        logininfo.put("pm", "00000000");
-        logininfo.put("tester", "password");
+        users.put("admin", new Admin("admin", "12345678"));
+        users.put("developer", new Developer("developer", "abcd123"));
+        users.put("pm", new ProjectManager("pm", "00000000"));
+        users.put("tester", new Tester("tester", "password"));
     }
 
-    public HashMap getLoginInfo() {
-        return logininfo;
+    public HashMap<String, User> getUsers() {
+        return users;
     }
 }
